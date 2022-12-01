@@ -9,6 +9,7 @@ import logo from "../assets/logo.png"
 export default function Navbar() {
     return (
         <div className='flex items-center justify-between px-5 lg:px-10 py-3'>
+            
             {/* Left Side */}
             <div className='flex items-center shrink-0'>
                 <FiMenu className='w-6 h-6'/>
@@ -36,6 +37,7 @@ export default function Navbar() {
                     <p className='font-bold mr-1.5 whitespace-nowrap'>Log in</p>
                 </div>
             </div>
+
         </div>
     )
 }
