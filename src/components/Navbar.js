@@ -8,7 +8,7 @@ import logo from "../assets/logo.png"
 
 export default function Navbar() {
     return (
-        <div className='flex items-center justify-between px-5 py-3'>
+        <div className='flex items-center justify-between px-5 lg:px-10 py-3'>
             {/* Left Side */}
             <div className='flex items-center shrink-0'>
                 <FiMenu className='w-6 h-6'/>
@@ -18,14 +18,18 @@ export default function Navbar() {
             </div>
 
             {/* Middle */}
-            <div className='hidden sm:flex w-full'>
-                <input type="search" placeholder="Search..." className="outline-0 bg-[#dae0e6] rounded-full pl-4 py-2 w-full mx-10"/>
+            <div className='hidden relative sm:flex w-full max-w-[40rem] mx-10 items-center'>
+                <input type="search" placeholder="Search..."
+                className="outline-0 bg-[#dae0e6] rounded-full pl-10 py-2 w-full"/>
+                <div className='absolute left-4'>
+                    <FiSearch />
+                </div>
             </div>
             
             {/* Right Side */}
             <div className='flex h-full items-center gap-3'>
-                <FiSearch className='h-6 w-6'/>
-                <GrAppsRounded className='h-6 w-6'/>
+                <FiSearch className='sm:hidden h-6 w-6'/>
+                <GrAppsRounded className='sm:hidden h-6 w-6'/>
                 <IoIosSettings className='h-6 w-6'/>
                 <div className='flex items-center bg-[#a359a0] p-1 rounded-full text-white'>
                     <FaUser className='h-5 w-5 ml-1.5 mr-1'/>
