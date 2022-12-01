@@ -24,7 +24,7 @@ export default function Navbar() {
                 <FiSearch className='h-6 w-6' />
                 <GrAppsRounded className='h-6 w-6' />
                 <IoIosSettings className='h-6 w-6' />
-                <div className='flex items-center bg-purple-400 p-1 rounded-full text-white'>
+                <div className='flex items-center bg-[#a359a0] p-1 rounded-full text-white'>
                     <FaUser className='h-5 w-5 ml-1.5 mr-1' />
                     <p className='font-bold mr-1.5'>Log in</p>
                 </div>
