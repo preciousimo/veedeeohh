@@ -6,7 +6,7 @@ import { FaUser } from 'react-icons/fa';
 import logo from "../assets/logo.png"
 
 
-export const Navbar = () => {
+export default function Navbar() {
     return (
         <div className='flex items-center justify-between px-5 lg:px-10 py-3'>
             
