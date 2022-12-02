@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Topics from "./components/Topics";
+import Content from "./components/Content";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Topics />
 
       {/* Content */}
+      <Content />
 
       {/* Shorts */}
     </div>
