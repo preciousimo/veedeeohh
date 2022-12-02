@@ -1,7 +1,7 @@
 import React from 'react'
 import TopicBtn from './TopicBtn'
 
-export const Topics = () => {
+export default function Topics() {
     const topics = ["All", "Trending", "Gospel", "Education", "Sports", "Programming", "Comedy", "Fashion", "Cartoons"]
     return (
         <div className='flex items-center space-x-4 px-5 lg:px-10 pt-2'>
