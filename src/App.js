@@ -1,21 +1,23 @@
 import Navbar from "./components/Navbar";
 import Topics from "./components/Topics";
 import Content from "./components/Content";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
     <div className="App">
-
       {/* Navbar */}
       <Navbar />
-
-      {/* Sidebar */}
-
-      {/* Topics */}
-      <Topics />
-
-      {/* Content */}
-      <Content />
+      <div className="flex">
+        {/* Sidebar */}
+        <Sidebar />
+        <div className="">
+          {/* Topics */}
+          <Topics />
+          {/* Content */}
+          <Content />
+        </div>
+      </div>
 
       {/* Shorts */}
     </div>

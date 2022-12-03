@@ -18,7 +18,7 @@ export default function Content() {
     };
 
     return (
-        <div className='px-5 lg:px-10 pt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+        <div className='px-5 lg:px-6 pt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
             {contents.map((content) => (
                 <div>
                     <div className="flex w-full h-40 justify-center shadow-gray-300 rounded-[0.7rem]">
