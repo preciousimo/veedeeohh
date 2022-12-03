@@ -20,9 +20,10 @@ export default function Content() {
     return (
         <div className='px-5 lg:px-6 pt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
             {contents.map((content) => (
-                <div>
-                    <div className="flex w-full h-40 justify-center shadow-gray-300 rounded-[0.7rem]">
-                        <img src={content.photo} alt="Thumbmail" className="object-cover w-80 h-40 rounded-[0.7rem]" />
+                <div className="mx-12 sm:mx-0">
+                    <div className="flex h-48 justify-center shadow-gray-300 rounded-[0.7rem] md:h-32 lg:h-48 xxl:h-60"> {/* include "overflow-hidden" to classname*/}
+                        <img src={content.photo} alt="Thumbmail"
+                        className="object-cover w-full h-full rounded-[0.7rem] md:h-32 lg:h-full hover:scale-110 duration-200 ease-out" />
                     </div>
                     <div className="flex items-center pt-2">
                         <div className="w-10 h-10 shrink-0">
