@@ -15,7 +15,7 @@ export default function Sidebar() {
     { name: "Past", icon: <AiOutlineFieldTime /> },
   ];
   return (
-    <div className="hidden md:flex flex-col gap-8 pt-4 items-center px-2 lg:px-7">
+    <div className="hidden md:flex flex-col gap-4 pt-4 items-center px-2 lg:px-7">
         {sideItems.map((item) => (
             <SideBtn name={item.name} icon={item.icon}/>
         ))}

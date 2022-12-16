@@ -11,7 +11,7 @@ export default function Content() {
 
     let getData = async () => {
         let response = await axios.get(
-            `http://127.0.0.1:8000/contents`
+            `https://veedeeohh-api.up.railway.app/contents`
         );
         console.log("Response:", response);
         setContents(response.data);
@@ -21,7 +21,7 @@ export default function Content() {
         <div className='px-5 lg:px-6 pt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
             {contents.map((content) => (
                 <div className="mx-12 sm:mx-0">
-                    <div className="flex h-48 justify-center shadow-gray-300 rounded-[0.7rem] md:h-32 lg:h-48 xxl:h-60"> {/* include "overflow-hidden" to classname*/}
+                    <div className="flex h-48 justify-center shadow-gray-300 rounded-[0.7rem] md:h-32 lg:h-48 xxl:h-60 overflow-hidden"> {/* include "overflow-hidden" to classname*/}
                         <img src={content.photo} alt="Thumbmail"
                         className="object-cover w-full h-full rounded-[0.7rem] md:h-32 lg:h-full hover:scale-110 duration-200 ease-out" />
                     </div>
