@@ -11,7 +11,7 @@ export default function Content() {
 
     let getData = async () => {
         let response = await axios.get(
-            `https://veedeeohh-api.up.railway.app/contents`
+            `http://127.0.0.1:8000/contents/`
         );
         console.log("Response:", response);
         setContents(response.data);
@@ -27,7 +27,7 @@ export default function Content() {
                     </div>
                     <div className="flex items-center pt-2">
                         <div className="w-10 h-10 shrink-0">
-                            <img src={content.profile.img} alt="Profile Picture" className="rounded-full" />
+                            <img src={content.profile.img} alt="image" className="rounded-full w-96 h-10" />
                         </div>
 
                         <div className="overflow-hidden flex flex-wrap items-center">

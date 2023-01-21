@@ -1,26 +1,16 @@
-import Navbar from "./components/Navbar";
-import Topics from "./components/Topics";
-import Content from "./components/Content";
-import Sidebar from "./components/Sidebar";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+import Home from './pages/Home'
+import LoginPage from './pages/Authenticate/LoginPage' 
 
 function App() {
   return (
-    <div className="App">
-      {/* Navbar */}
-      <Navbar />
-      <div className="flex">
-        {/* Sidebar */}
-        <Sidebar />
-        <div className="">
-          {/* Topics */}
-          <Topics />
-          {/* Content */}
-          <Content />
-        </div>
-      </div>
-
-      {/* Shorts */}
-    </div>
+    <Router>
+      <Routes>
+        <Route element={<Home/>} path="" />
+        <Route element={<LoginPage/>} path="/login" />
+      </Routes>
+    </Router>
   );
 }
 
