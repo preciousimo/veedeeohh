@@ -11,7 +11,7 @@ export default function Content() {
 
     let getData = async () => {
         let response = await axios.get(
-            `http://127.0.0.1:8000/contents/`
+            `http://127.0.0.1:8000/api/contents/`
         );
         console.log("Response:", response);
         setContents(response.data);
