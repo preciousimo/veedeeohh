@@ -21,7 +21,7 @@ export default function Content() {
             {contents.map((content) => (
                 <div className="mx-12 sm:mx-0">
                     <div className="flex h-48 justify-center shadow-gray-300 rounded-[0.7rem] md:h-32 lg:h-48 xxl:h-60 overflow-hidden"> {/* include "overflow-hidden" to classname*/}
-                        <img src={content.photo} alt="Thumbmail"
+                        <img src={content.video} alt="Thumbmail"
                         className="object-cover w-full h-full rounded-[0.7rem] md:h-32 lg:h-full hover:scale-110 duration-200 ease-out" />
                     </div>
                     <div className="flex items-center pt-2">
