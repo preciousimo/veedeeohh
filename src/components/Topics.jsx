@@ -13,7 +13,7 @@ export default function Topics() {
 
     let getData = async () => {
         let response = await axios.get(
-            `http://127.0.0.1:8000/api/topics/`
+            `https://veedeeohh-api.up.railway.app/api/topics/`
         );
         console.log("Response:", response);
         setTopics(response.data);

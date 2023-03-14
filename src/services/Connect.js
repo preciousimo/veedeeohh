@@ -3,7 +3,7 @@ import axios from "axios";
 class Connect { 
 
     async login(body) { 
-        const resp = await fetch("http://127.0.0.1:8000/auth/", {
+        const resp = await fetch("https://veedeeohh-api.up.railway.app/auth/", {
             'method': 'POST',
             headers: {
                 'Content-Type': 'application/json',
