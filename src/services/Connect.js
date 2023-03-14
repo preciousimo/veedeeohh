@@ -2,8 +2,7 @@ import axios from "axios";
 
 class Connect { 
 
-    async login(body) {
-        // const resp = await fetch("http://127.0.0.1:8000/api/login/", {
+    async login(body) { 
         const resp = await fetch("http://127.0.0.1:8000/auth/", {
             'method': 'POST',
             headers: {
@@ -11,7 +10,9 @@ class Connect {
             },
             body: JSON.stringify(body)
         });
+        let data = await resp.json();
         return await resp.json(); 
+        console.log(data);
     }
 
     signup(data) {
@@ -19,4 +20,5 @@ class Connect {
     }
 }
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default new Connect();

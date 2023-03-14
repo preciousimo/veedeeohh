@@ -1,11 +1,12 @@
-import Navbar from "./components/Navbar";
-import Topics from "./components/Topics";
-import Content from "./components/Content";
-import Sidebar from "./components/Sidebar";
+import Navbar from "../components/Navbar";
+import Topics from "../components/Topics";
+import Content from "../components/Content";
+import Sidebar from "../components/Sidebar";
 
 function Home() {
+
   return (
-    <div className="App">
+    <div className="">
       {/* Navbar */}
       <Navbar />
       <div className="flex">

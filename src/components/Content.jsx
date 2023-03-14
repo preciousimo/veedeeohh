@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import React, { useEffect, useState } from "react"; 
 import axios from "axios";
 
 export default function Content() {
@@ -27,7 +26,7 @@ export default function Content() {
                     </div>
                     <div className="flex items-center pt-2">
                         <div className="w-10 h-10 shrink-0">
-                            <img src={content.profile.img} alt="image" className="rounded-full w-96 h-10" />
+                            <img src={content.profile.img} alt="Alernative" className="rounded-full w-96 h-10" />
                         </div>
 
                         <div className="overflow-hidden flex flex-wrap items-center">

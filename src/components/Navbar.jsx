@@ -1,17 +1,14 @@
-import React from 'react';
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useContext} from 'react';
+import { Link, } from "react-router-dom";
 import { FiMenu, FiSearch } from 'react-icons/fi';
 import { GrAppsRounded } from 'react-icons/gr';
 import { IoIosSettings } from 'react-icons/io';
 import { FaUser } from 'react-icons/fa';
-import logo from "../../assets/logo.png"
-
-import LoginPage from '../Authenticate/LoginPage';
-
+import logo from "../assets/logo.png"
+import AuthContext from '../context/AuthContext';
 
 export default function Navbar() {
-
-    // const [showLogin, setShowLogin] = useState(false);
+    let {user, logoutUser} = useContext(AuthContext);
 
     return (
         <div className='flex items-center justify-between px-5 lg:px-10 py-3'>
@@ -23,6 +20,8 @@ export default function Navbar() {
                     <img src={logo} alt="logo" className='w-32'/>
                 </div>
             </div>
+
+            {/* <p>Hello {user.name}</p> */}
 
             {/* Middle */}
             <div className='hidden relative sm:flex w-full max-w-[40rem] mx-10 items-center'>
@@ -38,12 +37,20 @@ export default function Navbar() {
                 <FiSearch className='sm:hidden h-6 w-6'/>
                 <GrAppsRounded className='sm:hidden h-6 w-6'/>
                 <IoIosSettings className='h-6 w-6'/>
-                <Link to={'/login'}>
-                <button className='flex items-center bg-[#a359a0] p-1 rounded-full text-white'>
-                    <FaUser className='h-5 w-5 ml-1.5 mr-1'/>
-                    <p className='font-bold mr-1.5 whitespace-nowrap'>Log in</p>
-                </button >
-                </Link>
+                {user ? 
+                    <Link to={'/'}>
+                    <button className='flex items-center bg-[#a359a0] p-1 rounded-full text-white'>
+                        <FaUser className='h-5 w-5 ml-1.5 mr-1'/>
+                        <p className='font-bold mr-1.5 whitespace-nowrap' onClick={logoutUser}>Log out</p>
+                    </button >
+                    </Link> :  
+                    <Link to={'/login'}>
+                    <button className='flex items-center bg-[#a359a0] p-1 rounded-full text-white'>
+                        <FaUser className='h-5 w-5 ml-1.5 mr-1'/>
+                        <p className='font-bold mr-1.5 whitespace-nowrap'>Log in</p>
+                    </button >
+                    </Link>
+                }
             </div>
         </div>
     )
