@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext} from 'react';
+import React, { useContext} from 'react';
 import { Link, } from "react-router-dom";
 import { FiMenu, FiSearch } from 'react-icons/fi';
 import { GrAppsRounded } from 'react-icons/gr';
